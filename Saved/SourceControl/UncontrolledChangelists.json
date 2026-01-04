@@ -1,0 +1,50 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/Objects/BP_Door.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/LevelPrototyping/Interactable/Door/Assets/Meshes/SM_Door.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/C/D4/AATIDNOXP68H63E701G3TJ.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/StarterContent/Props/SM_Door.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/Objects/First_Door_Test/BP_Door_Type1.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/Objects/Physics_BAsed/BP_Door_Type2.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/4/0A/RZ9LC1C7A0HYU08UJVJZXZ.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/Objects/Physics_BAsed/BP_Door_Type3.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/Objects/Button_Based/BP_Door_Type1.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/Objects/Button_Based/BP_Door_Type4.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/Objects/Button_Based/BP_Door_Type5.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/Objects/Automatic/BP_Door_Type6.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/B/L9/NITT3O7ZQYL4IS34MP3AD2.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/5/EF/ERY64TXM97XFG74VE5NUSG.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/2/29/4Y89D09PVPRLUX07ARMMR8.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/0/ET/ULLB66GBMNFYVKI0CISHEM.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/0/5U/17E7PDNNYPSDX65Q219VCB.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/Objects/Button_Based/BP_Door_Type7.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/8/5B/8GWHUMC0Y8NUYGPGSTY3B6.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/Objects/Key_Based/BP_Door_Type8.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/Objects/Key_Based/BP_Key_Test.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/7/Z4/S25GV64WR07LFYLCGWX591.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/B/0B/IGUVLS4VZCEC2SX3L2SCES.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/Objects/Combined/BP_Door_Type9.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/TestEnemy/BP_Test_AI.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/TestEnemy/AI/BP_Patrol_Route_Test.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/6/OZ/URJGP47VZKS2B8074HXC7F.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/0/EW/GDJIQUU23VKCM3XE9WS38J.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/TestEnemy/AI/AIC_Test_Base.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/TestEnemy/AI/Enum/Enum_AI_State.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/TestEnemy/AI/BT_AI_Test.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/TestEnemy/AI/BB_AI_Test.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/TestEnemy/AI/Interfaces/BPI_AI_Test.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/TestEnemy/AI/Decorator/BTD_Has_Patrol_Route.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/TestEnemy/AI/Decorator/BTD_Is_Door_Near.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/AI/BP_Test_AI.uasset",
+				"C:/Users/emigo/OneDrive/Documentos/Unreal Projects/MyProject/Content/Objects/BP_Door_Type1.uasset"
+			]
+		}
+	]
+}
