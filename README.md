@@ -99,6 +99,18 @@ Example:
 
   <summary>Door Mechanic Only</summary>
 
-  This door has the Key Event in this case, the "F" Key inside the Door Actor, and the rotation of the door uses a different method
+  ### Door Mechanic Only
+
+  This door has the Key Event in this case, the "F" Key inside the Door Actor, and the rotation of the door uses a different method which will be used for most doors moving forward, the difference is on how the z-axis of the door which uses.....
+  
+  [Insert Door Blueprint Here]
+
+  [Insert Door Code here]
+
+  <summary>Opening the door using a button at long distance</summary>
+
+  ###Door with a Button at a long distance.
+
+  This door has hitbox in which it is far away from the door itself
   
 </details>
