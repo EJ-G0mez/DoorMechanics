@@ -93,10 +93,6 @@ Example:
 
   [Insert Coor Blueprint Code here]
 
-  Possible uses:
-
-  Limitations:
-
   <summary>Door Mechanic Only</summary>
 
   ### Door Mechanic Only
@@ -109,8 +105,54 @@ Example:
 
   <summary>Opening the door using a button at long distance</summary>
 
-  ###Door with a Button at a long distance.
+  ### Door with a Button at a long distance.
 
-  This door has hitbox in which it is far away from the door itself
+  This door has hitbox in which it is far away from the door itself, meaning that the hit box is away from the door model.
+
+  In this case, in the door hitbox, there is a simple cylinder to mark the place where the hitbox is so it can be interacted with.
+
+  [Insert Door Image here]
+
+  [Insert Door Component here]
+
+  [Inser Door Code here]
+  
+</details>
+
+<details>
+
+  <summary>Second Type: Physics Based door</summary>
+
+  # Second Type: Physics Based
+
+  ## Just push
+
+  These types of doors main way to be opened is to have a physics component that allows the player to move it. There are two ways in which the doors physics are being used.
+
+  <summary>Physics Type A</summary>
+
+  ### Physics Type A
+
+  <summary>Physics Type B</summary>
+
+  ### Physics Type B
+  
+</details>
+
+<details>
+
+  <summary>Third Type: Automatic Doors</summary>
+
+  # Third Type: Automatic Doors
+
+  ## Keeping Momentum
+
+  There is only one type of door in this project, when the player reaches the door's hitbox, it start opening automatically, and closing once they leave.
+
+  [Insert Door image]
+
+  [Insert Door Component]
+
+  [Insert Door Code]
   
 </details>
