@@ -9,7 +9,7 @@ This project is meant to be a *learning and practical* execution of multiple doo
   3. Automatically opened based doors
   4. Doors opened with keys
 
-This project can be viewed functioning in the following demo reel here: https://youtu.be/npkyZY1SgLA
+This project can be viewed functioning in the following demo reel here: 
 
 This README document is meant to record all of the features this code has, giving a thrurough explanation with the use of Diagrams, Images, and PseudoCode meant to resemble the Unreal Engine 5 block structure.
 
@@ -73,7 +73,7 @@ Example:
 
   These types of doors are opened by tapping a key button on the keyboard, there are a few methods that are being used.
 
-  [Insert door screenshots here]
+  <img width="1554" height="871" alt="imagen" src="https://github.com/user-attachments/assets/8e9705ba-659d-4c11-8079-921a3fb3b6ce" />
 
   <summary>Player Controller + Door Mechanic</summary>
 
@@ -85,11 +85,13 @@ Example:
 
   The turning of the Z azis using this method is unique to this door, 
 
-  [Insert Player COntroller Image here]
+  <img width="1378" height="324" alt="imagen" src="https://github.com/user-attachments/assets/5e12fc9a-ee55-4e1e-8ab6-95bcf1c5b8fe" />
 
   [Insert Player Controller Code here]
 
-  [Insert Door Blueprint here]
+  <img width="1115" height="407" alt="imagen" src="https://github.com/user-attachments/assets/541bb4c6-0aac-4c61-8eb9-f8125d775e52" />
+
+  <img width="1213" height="327" alt="imagen" src="https://github.com/user-attachments/assets/ca40fa27-3fb2-4194-8eee-c49408969d78" />
 
   [Insert Coor Blueprint Code here]
 
@@ -154,5 +156,31 @@ Example:
   [Insert Door Component]
 
   [Insert Door Code]
+  
+</details>
+
+<details>
+
+  <summary>Fourth Type: Open with a Key</summary>
+
+  # Fourth Type: Open with a Key
+
+  ## Get the key, open the path.
+
+  Another door type where there is only one type. There is an object type key, that once the player need to collect to be able to interact with the door.
+
+  [Insert Door and Key Image]
+
+  [Insert Door Component]
+
+  [Insert Key Component]
+
+  [Insert Player Component]
+
+  [Insert Door code]
+
+  [Insert Key code]
+
+  [Insert player code]
   
 </details>
