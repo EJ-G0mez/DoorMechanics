@@ -146,11 +146,42 @@ Example:
 
   ### Door Mechanic Only
 
-  This door has the Key Event in this case, the "F" Key inside the Door Actor, and the rotation of the door uses a different method which will be used for most doors moving forward, the difference is on how the z-axis of the door which uses.....
+  This door has the Key Event in this case, the "F" Key inside the Door Actor, and the rotation of the door uses a different method which will be used for most doors moving forward, the difference is on how the z-axis of the door which uses a Make Rotator Function which sets the value of the z-Axis, depending if you are opening or closing the door. As well as adding the On Component Begin/End Overlap Events that trigger when the door's hitbox, overlaps with the player controller.
   
-  [Insert Door Blueprint Here]
+  <img width="982" height="536" alt="imagen" src="https://github.com/user-attachments/assets/37491c74-5e68-4b8b-8446-37e875cf9195" /> [^6]
 
-  [Insert Door Code here]
+  [^6]: Door_Type_4 Event Graph, with the Events "F", On Component Begin Overlap (Box) and On Component End Overlap (Box)
+
+  ```
+
+    public class Door_Type_4 extends Actor {
+    public StaticMesh SMDoor;
+    public StaticMesh doorOutMesh;
+
+
+    public Timeline DoorSpeed(){
+      track doorRot = [/*value*/[0, 90], /*time*/[0.0, 1.0]];
+    }
+
+    public event F(){
+      flipflop {
+        A (DoorSpeed.play):
+          SetRelativeRotation(doorMesh, MakeRotator(0.0, 0.0, DoorSpeed.doorRot));
+        B (DoorSpeed.reverse):
+          SetRelativeRotation(doorMesh, MakeRotator(/*x*/ 0.0, /*y*/ 0.0, /*z*/ DoorSpeed.doorRot));
+      }
+    }
+
+    public event OnComponentBeginOverlap(){
+      EnableInput(self, GetPlayerController());
+    }
+
+    public event OnComponentEndOverlap(){
+          DisableInput(self, GetPlayerController());
+        }
+  }
+  
+  ```
 
   <summary>Opening the door using a button at long distance</summary>
 
@@ -158,13 +189,46 @@ Example:
 
   This door has hitbox in which it is far away from the door itself, meaning that the hit box is away from the door model.
 
-  In this case, in the door hitbox, there is a simple cylinder to mark the place where the hitbox is so it can be interacted with.
+  The logic is the exact same as the previous door, except that the hitbox is away from the door, in the door hitbox, there is a simple cylinder to mark the place where the hitbox is so it can be interacted with.
 
-  [Insert Door Image here]
+  <img width="660" height="479" alt="imagen" src="https://github.com/user-attachments/assets/9d0efd01-2d61-46e8-9f2e-d722caef9dd9" /> [^7]
 
-  [Insert Door Component here]
+[^7]: Door_Type_5 Viewport showing the hitbox far from the door model
 
-  [Inser Door Code here]
+ <img width="982" height="536" alt="imagen" src="https://github.com/user-attachments/assets/37491c74-5e68-4b8b-8446-37e875cf9195" /> [^8]
+
+  [^8]: Door_Type_ Event Graph, with the Events "F", On Component Begin Overlap (Box) and On Component End Overlap (Box)
+
+  ```
+
+    public class Door_Type_5 extends Actor {
+    public StaticMesh SMDoor;
+    public StaticMesh doorOutMesh;
+
+
+    public Timeline DoorSpeed(){
+      track doorRot = [/*value*/[0, 90], /*time*/[0.0, 1.0]];
+    }
+
+    public event F(){
+      flipflop {
+        A (DoorSpeed.play):
+          SetRelativeRotation(doorMesh, MakeRotator(0.0, 0.0, DoorSpeed.doorRot));
+        B (DoorSpeed.reverse):
+          SetRelativeRotation(doorMesh, MakeRotator(/*x*/ 0.0, /*y*/ 0.0, /*z*/ DoorSpeed.doorRot));
+      }
+    }
+
+    public event OnComponentBeginOverlap(){
+      EnableInput(self, GetPlayerController());
+    }
+
+    public event OnComponentEndOverlap(){
+          DisableInput(self, GetPlayerController());
+        }
+  }
+  
+  ```
   
 </details>
 
