@@ -240,15 +240,29 @@ Example:
 
   ## Just push
 
-  These types of doors main way to be opened is to have a physics component that allows the player to move it. There are two ways in which the doors physics are being used.
+  These types of doors main way to be opened is to have a physics contsraint that allows the player to move it. There are two ways in which the doors physics are being used.
 
   <summary>Physics Type A</summary>
 
   ### Physics Type A
 
+  This door in the Angular Motor has an Angular Drive Mode of "Twist and Swing" with Acceleration activated, and the Target Orientation Drive only to Swing and Strength at 50.0. This will let the door to swing in its axis. This axis is set in the Angular Limits, where Swing 1 Motion is set to Limited with a 90° limit.
+
+  <img width="459" height="656" alt="imagen" src="https://github.com/user-attachments/assets/98a741b3-9b6c-421b-888c-cb079e207e2d" /> [^9]
+
+  [^9]: Door_Type_2 Angular Motor and Angular Limits in Viewport
+
+
   <summary>Physics Type B</summary>
 
   ### Physics Type B
+
+  In comparison with the firs door, the only difference is that the Angular Drive Motor is set to SLERP (Spherical Lerp). 
+
+  <img width="469" height="735" alt="imagen" src="https://github.com/user-attachments/assets/a7e01e8a-fab9-432c-873c-7dd2b10e3329" /> [^10]
+
+  [^10]: Door_Type_3 Angular Motor and Angular Limits in Viewport.
+
   
 </details>
 
