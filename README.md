@@ -7,9 +7,7 @@ This project is meant to be a *learning and practical* execution of multiple doo
   1. Button-based doors
   2. Physics based doors
   3. Automatically opened based doors
-  4. Doors opened with keys
-
-This project can be viewed functioning in the following demo reel here: 
+  4. Doors opened with keys 
 
 This README document is meant to record all of the features this code has, giving a thrurough explanation with the use of Diagrams, Images, and PseudoCode meant to resemble the Unreal Engine 5 block structure.
 
@@ -274,13 +272,39 @@ Example:
 
   ## Keeping Momentum
 
-  There is only one type of door in this project, when the player reaches the door's hitbox, it start opening automatically, and closing once they leave.
+  There is only one type of door in this project, when the player reaches the door's hitbox, it start opening automatically, and closing once they leave. This once removes the needed from a player input, and only detects if there is an overlapping hitbox
 
-  [Insert Door image]
+  <img width="805" height="735" alt="imagen" src="https://github.com/user-attachments/assets/74945a99-8b74-4b87-a5ac-c9725d91d226" /> [^11]
 
-  [Insert Door Component]
+  [^11]: Automatic Door in Level Outliner in Unreal Engine 5
 
-  [Insert Door Code]
+  <img width="1490" height="569" alt="imagen" src="https://github.com/user-attachments/assets/3d20c1a2-3b6a-41c7-a4ad-c73b37c4f186" /> [^12]
+
+  [^12]: Overlappring Boxes Events from Door_Type6 in Unreal Engine 5
+  
+  ```
+
+    public class Door_Type6 extends Actor {
+    public StaticMesh SMDoor;
+    public StaticMesh doorOutMesh;
+
+
+    public Timeline DoorSpeed(){
+      track doorRot = [/*value*/[0, 90], /*time*/[0.0, 1.0]];
+    }
+
+    public event OnComponentBeginOverlap(){
+       DoorSpeed.play:
+        SetRelativeRotation(doorMesh, MakeRotator(/*x*/ 0.0, /*y*/ 0.0, /*z*/ DoorSpeed.doorRot));
+    }
+
+    public event OnComponentEndOverlap(){
+      DoorSpeed.reverse:
+        SetRelativeRotation(doorMesh, MakeRotator(/*x*/ 0.0, /*y*/ 0.0, /*z*/ DoorSpeed.doorRot));
+    }
+  }
+  
+  ```
   
 </details>
 
@@ -294,18 +318,86 @@ Example:
 
   Another door type where there is only one type. There is an object type key, that once the player need to collect to be able to interact with the door.
 
-  [Insert Door and Key Image]
+  <img width="984" height="588" alt="imagen" src="https://github.com/user-attachments/assets/55181474-ea27-4838-b33c-8a4b13f453b9" /> [^13]
 
-  [Insert Door Component]
+  [^13]: Door and Key in Level in Unreal Engine 5
 
-  [Insert Key Component]
+  <img width="1574" height="525" alt="imagen" src="https://github.com/user-attachments/assets/614cd99f-4442-412c-958d-ccde8f9d8b8a" />
+  <img width="1364" height="721" alt="imagen" src="https://github.com/user-attachments/assets/436f78e3-13de-419f-a5ca-b1bbf6e2af80" /> [^14]
 
-  [Insert Player Component]
+  [^14]: Door_Type_8 Event Graph showing if the player has a key it will allow the player to trigger opening the door
 
-  [Insert Door code]
+  
+  ```
 
-  [Insert Key code]
+    public class Door_Type_8 extends Actor {
+    public StaticMesh SMDoor;
+    public StaticMesh doorOutMesh;
+    public BPFirstPersonPlayerCharacter asBPFirstPlayerCharacter;
 
-  [Insert player code]
+
+    public Timeline DoorSpeed(){
+      track doorRot = [/*value*/[0, 90], /*time*/[0.0, 1.0]];
+    }
+
+    public event BeginPlay(){
+      asBPFirstPlayerCharacter = (BPFirstPersonPlayerCharacter) GetPlayerCharacter();
+    }
+
+    public event F(){
+      flipflop {
+        A (DoorSpeed.play):
+          SetRelativeRotation(doorMesh, MakeRotator(0.0, 0.0, DoorSpeed.doorRot));
+        B (DoorSpeed.reverse):
+          SetRelativeRotation(doorMesh, MakeRotator(/*x*/ 0.0, /*y*/ 0.0, /*z*/ DoorSpeed.doorRot));
+      }
+    }
+
+    public event OnComponentBeginOverlap(Actor otherActor){
+      if(otherActor == asBPFirstPersonCharacter){
+        if(asBPFirstPersonCharacter.hasKey){
+          EnableInput(self, GetPlayerController());
+        }
+      }
+    }
+
+    public event OnComponentEndOverlap(){
+          DisableInput(self, GetPlayerController());
+        }
+  }
+  
+  ```
+
+  <img width="1024" height="582" alt="imagen" src="https://github.com/user-attachments/assets/c916a833-6ec9-4ccf-97ef-af9bda87d3f5" />
+  <img width="1089" height="451" alt="imagen" src="https://github.com/user-attachments/assets/abf0e438-847e-4b60-b863-f49cb1007393" /> [^15]
+
+  [^15]: BP_Key_Test Event Graph in Unreal Engine 5, showing that if a player overlpas with the hitbox, it will destroy the key and set the player hasKey value to true.
+
+   ```
+
+    public class BP_Key_Test extends Actor {
+    public StaticMesh Sphere;
+    public BoxCollision Box;
+    public BPFirstPersonPlayerCharacter asBPFirstPlayerCharacter;
+
+    public event BeginPlay(){
+      asBPFirstPlayerCharacter = (BPFirstPersonPlayerCharacter) GetPlayerCharacter();
+    }
+
+    public event DoorKey(){
+      asBPFirstPersonCharacter.hasKey = True;
+      DestroyActor(self);
+    }
+
+    public event OnComponentBeginOverlap(Actor otherActor){
+      if(otherActor == asBPFirstPersonCharacter){
+         DoorKey();
+      }
+    }
+  }
+  
+  ```
+  <img width="216" height="143" alt="imagen" src="https://github.com/user-attachments/assets/e19e6abf-6b55-4707-bd43-484b45c2fea7" /> [^16]
+  [^16]: Variables of the BP_Firs_Person_Character Actor in Unreal Engine 5
   
 </details>
